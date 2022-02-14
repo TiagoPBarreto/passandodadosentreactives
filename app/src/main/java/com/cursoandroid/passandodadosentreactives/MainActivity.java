@@ -22,10 +22,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //chamando a segunda atividade
                 Intent intent = new Intent(getApplicationContext(),SegundaActivity.class );
+                //Instanciar o Objeto
+                Usuario usuario = new Usuario("Tiago ", "tiago@gmail.com" );
                 //Passando dados
                 intent.putExtra("nome", "Tiago");
                 intent.putExtra("idade", 29);
+                intent.putExtra("objeto", usuario);
                 startActivity(intent);
+
 
             }
         });
